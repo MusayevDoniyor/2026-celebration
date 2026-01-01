@@ -1,7 +1,6 @@
-
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { audioSystem } from './AudioSystem';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { audioSystem } from "./AudioSystem";
 
 const NeonTitle: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -15,22 +14,24 @@ const NeonTitle: React.FC = () => {
       }
       gsap.to(titleRef.current, {
         opacity: isFlicker ? 0.7 : 1,
-        filter: `drop-shadow(0 0 ${Math.random() * 10 + 5}px rgba(139, 92, 246, 0.5))`,
+        filter: `drop-shadow(0 0 ${
+          Math.random() * 10 + 5
+        }px rgba(139, 92, 246, 0.5))`,
         duration: 0.1 + Math.random() * 0.2,
-        onComplete: flicker
+        onComplete: flicker,
       });
     };
     flicker();
   }, []);
 
   return (
-    <div className="text-center select-none neon-title-container">
-      <h2 className="text-lg md:text-xl text-blue-300 font-extralight tracking-[0.5em] uppercase mb-4 opacity-70">
+    <div className="text-center select-none neon-title-container px-4">
+      <h2 className="text-sm sm:text-lg md:text-xl text-blue-300 font-extralight tracking-[0.5em] uppercase mb-4 opacity-70">
         The Dawn of a New Era
       </h2>
-      <h1 
+      <h1
         ref={titleRef}
-        className="relative text-5xl md:text-8xl lg:text-9xl font-black italic tracking-tighter leading-none transition-all duration-300"
+        className="relative text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black italic tracking-tighter leading-none transition-all duration-300 py-2"
       >
         {/* Layered Glows */}
         <span className="absolute inset-0 text-fuchsia-600 blur-3xl opacity-30 translate-y-2">
@@ -40,16 +41,16 @@ const NeonTitle: React.FC = () => {
           Happy New Year 2026
         </span>
         {/* Main Text Gradient */}
-        <span className="relative bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-blue-100 drop-shadow-[0_2px_10px_rgba(255,255,255,0.4)]">
+        <span className="relative bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-blue-100 drop-shadow-[0_2px_10px_rgba(255,255,255,0.4)] block break-words">
           Happy New Year 2026
         </span>
       </h1>
-      <div className="mt-8 flex justify-center items-center gap-6">
-        <span className="h-px w-10 md:w-32 bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent" />
-        <p className="text-fuchsia-400 font-cursive text-2xl md:text-5xl drop-shadow-lg rotate-[-2deg]">
+      <div className="mt-8 flex justify-center items-center gap-4 md:gap-6">
+        <span className="h-px w-8 md:w-32 bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent" />
+        <p className="text-fuchsia-400 font-cursive text-xl sm:text-3xl md:text-5xl drop-shadow-lg rotate-[-2deg] whitespace-nowrap">
           Sparkling Moments
         </p>
-        <span className="h-px w-10 md:w-32 bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent" />
+        <span className="h-px w-8 md:w-32 bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent" />
       </div>
     </div>
   );

@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# New Year 2026 Celebration
 
-# Run and deploy your AI Studio app
+Welcome to the New Year 2026 Celebration website! This project is a React-based web application built with Vite and TailwindCSS to celebrate the arrival of the year 2026.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1_BDvcywPO48FVF2viw8zM2kf1ZirjBSL
+- Festive design with 2026 themes.
+- React + TypeScript for robust development.
+- TailwindCSS for rapid styling.
+- Fast development server with Vite.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+
+2. Set up environment variables:
+   Copy `.env.local.example` to `.env.local` (if applicable) and add necessary keys.
+
 3. Run the app:
    `npm run dev`
+
+## Deployment
+
+Build the app for production:
+`npm run build`
